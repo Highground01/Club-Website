@@ -24,10 +24,10 @@
         <a href="./Zack/Zack.html">Zach's Page</a>
     </div>
     </div>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Projects!</button>
-      <div id="myDropdown" class="dropdown-content">
-          <a href="#AlexPage">Jem's SNAKE</a>
+    <div class="dropdown2">
+      <button onclick="myFunction2()" class="dropbtn2">Projects!</button>
+      <div id="myDropdown2" class="dropdown-content2">
+          <a href="#JemPage">Jem's SNAKE</a>
       </div>
       </div>
     
@@ -98,6 +98,20 @@
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
     var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
+
+  function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn2')) {
+    var myDropdown = document.getElementById("myDropdown2");
       if (myDropdown.classList.contains('show')) {
         myDropdown.classList.remove('show');
       }
